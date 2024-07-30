@@ -179,10 +179,6 @@ img {
   display: flex;
   gap: 50px;
 }
-.footer__menu-item {
-}
-.footer__menu-link {
-}
 .footer__info {
   font-size: 16px;
   display: flex;
@@ -192,24 +188,8 @@ img {
 .footer__copyright {
   margin-bottom: 17px;
 }
-.footer__description {
-}
-.footer__developers {
-}
-.footer__developer {
-}
-.footer__developer-link {
-}
-.footer__contacts {
-}
-.footer__email {
-}
 .footer__social {
   display: flex;
   gap: 12px;
   margin-top: 16px;
-}
-.footer__social-item {
-}
-.footer__social-link {
 }
