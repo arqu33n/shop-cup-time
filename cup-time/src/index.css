@@ -64,8 +64,6 @@ img {
 .header__logo-link {
   font-size: 0;
 }
-.header__nav {
-}
 .header__menu {
   display: flex;
   align-items: center;
@@ -166,10 +164,6 @@ img {
   gap: 38px;
   grid-template-columns: repeat(2, max-content);
   justify-content: space-between;
-}
-.footer__logo-link {
-}
-.footer__logo {
 }
 .footer__nav {
   display: flex;
