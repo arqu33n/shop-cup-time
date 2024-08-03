@@ -1,14 +1,16 @@
+import { Link } from "react-router-dom";
+
 export const Header = () => {
   return (
     <header className="header">
       <div className="container header__container">
-        <a className="header__logo-link">
+        <Link to="/" className="header__logo-link">
           <img
             src="images/logo.svg"
             alt="Логотип Cup Time"
             className="header__logo"
           />
-        </a>
+        </Link>
         <nav className="header__nav">
           <ul className="header__menu">
             <li className="header__menu-item">
@@ -38,9 +40,9 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
-        <a href="cart.html" className="header__cart-link">
+        <Link to="cart" className="header__cart-link">
           6
-        </a>
+        </Link>
       </div>
     </header>
   );
