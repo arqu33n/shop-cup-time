@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Cart } from "./Cart";
 import { Order } from "./Order";
 import { Products } from "./Products";
@@ -8,11 +8,11 @@ export const Main = () => {
   return (
     <main className="main">
       <Routes>
+        <Route path="/" element={<Navigate to="/products?category=tea" />} />
         <Route
-          path="/"
+          path="/products"
           element={
             <>
-              {" "}
               <Promo />
               <Products />
             </>
