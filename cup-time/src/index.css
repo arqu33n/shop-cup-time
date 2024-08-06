@@ -16,6 +16,7 @@ html {
 }
 body {
   font-family: "Inter", sans-serif;
+  min-width: 320px;
   background-color: #ffffff;
   font-size: 20px;
   line-height: 1.24;
@@ -66,6 +67,7 @@ input[type="number"] {
 }
 .header__container {
   max-width: 1352px;
+  border-radius: 6px;
   backdrop-filter: blur(60px);
   background: rgba(108, 185, 171, 0.7);
   padding: 12px 26px;
@@ -95,12 +97,25 @@ input[type="number"] {
   text-align: center;
   padding: 10px 4px 3px;
 }
+.header__control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header__close-btn {
+  display: none;
+}
+
+.header__burger {
+  display: none;
+}
 .promo {
   background-color: #6cb9ab;
   color: #fff;
 }
 .promo__container {
   padding-top: 210px;
+  min-height: 600px;
   padding-bottom: 80px;
   background-image: url("/images/bg-image.png");
   background-position: right 113px bottom 0px;
@@ -139,17 +154,19 @@ input[type="number"] {
 .product {
   font-size: 0;
   background: #f2f9f7;
-  min-height: 600px;
   height: 100%;
   display: flex;
   flex-direction: column;
   color: #1d1c1d;
+  border-radius: 6px;
+  overflow: hidden;
 }
 .product__content {
   flex-grow: 1;
   padding: 40px 24px 24px;
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 .product__image {
   width: 100%;
@@ -157,9 +174,9 @@ input[type="number"] {
 .product__title {
   font-weight: 400;
   font-size: 24px;
-  margin-bottom: 4px;
+  margin-bottom: 0px;
   margin-top: 0;
-  flex-grow: 1;
+  height: 62px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -376,6 +393,36 @@ input[type="number"] {
   height: 600px;
   /* background-color: #f2f9f7; */
 }
+
+.modal-cart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+.modal-cart__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+}
+.modal-cart__title {
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.modal-cart__button {
+  background-color: #64099b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 @media (max-width: 1240px) {
   .container {
     padding: 0 42px;
@@ -388,6 +435,7 @@ input[type="number"] {
     padding: 12px 42px;
   }
   .promo__container {
+    min-height: 484px;
     padding-top: 172px;
     padding-bottom: 60px;
     background-image: url("/images/bg-image-1024.png");
@@ -400,6 +448,9 @@ input[type="number"] {
   }
   .product {
     min-height: 450px;
+  }
+  .product__content {
+    gap: 24px;
   }
   .footer__menu {
     gap: 32px;
@@ -452,7 +503,7 @@ input[type="number"] {
   .products {
     padding: 80px 0;
   }
-  .product__title {
+  .products__title {
     font-size: 36px;
     margin-bottom: 24px;
   }
@@ -466,6 +517,7 @@ input[type="number"] {
 
   .product__title {
     font-size: 20px;
+    height: 48px;
   }
   .product__price {
     font-size: 16px;
@@ -582,6 +634,7 @@ input[type="number"] {
     padding-bottom: 250px;
     background-size: 145px;
     background-position: center bottom;
+    min-height: 420px;
   }
   .promo__title {
     font-size: 40px;
@@ -595,7 +648,7 @@ input[type="number"] {
   .products {
     padding: 60px 0;
   }
-  .product__title {
+  .products__title {
     font-size: 36px;
   }
   .products__list {
@@ -611,6 +664,7 @@ input[type="number"] {
   }
   .product__title {
     font-size: 16px;
+    height: 40px;
   }
   .footer__container {
     gap: 40px;
@@ -720,5 +774,41 @@ input[type="number"] {
     display: block;
     font-size: 16px;
     margin-bottom: 8px;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .header__nav.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    height: 100vh;
+    background-color: #6cb9ab;
+  }
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
   }
 }
