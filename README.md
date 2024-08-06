@@ -14,7 +14,7 @@ This is an pet project showcasing an online store for tea and coffee, built usin
 
 - React + Vite
 
-## [Example](https://shop-cup-time.vercel.app/products?category=tea) <-
+## [Example](https://shop-cup-time.vercel.app) <-
 
 ## Usage
 
