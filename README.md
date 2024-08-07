@@ -12,7 +12,9 @@ This is an pet project showcasing an online store for tea and coffee, built usin
 
 ## Tech Stack
 
-- React + Vite
+- React
+- React Context
+- Vite
 
 ## [Example](https://shop-cup-time.vercel.app) <-
 
